@@ -7,12 +7,14 @@ const Header = () => (
   <div id="header-section" className="relative sm:pt-12 sm:pb-8 pb-8 mx-auto">
     <div className="relative flex flex-col lg:gap-16 gap-4 items-center justify-center lg:justify-normal lg:flex-row lg:flex-nowrap max-w-screen-xl mx-auto mt-10 md:py-0">
     <div className='flex flex-col md:flex-row w-full'>
-  <div className='flex justify-center items-center h-auto w-1/2 ml-24 md:w-1/3 xl:w-2/5 xl:ml-0'>
+    <div className='flex justify-center items-center h-auto w-1/2 ml-24 md:w-1/3 xl:w-2/5 xl:ml-0'>
+    <BoxReveal>
     <img 
       src={Bilde} 
       alt="Bilde"
       className="shadow rounded-lg w-full"
     />
+    </BoxReveal>
   </div>
   <div className='flex flex-col w-full px-3 md:w-4/6 xl:w-4/5 xl:space-x-5'>
     <BoxReveal>
@@ -29,22 +31,22 @@ const Header = () => (
       </div>
     </BoxReveal>
     <BoxReveal>
-      <div className='flex bg-white bg-opacity-10 rounded-lg p-6 shadow-lg w-full mt-6'>
+      <div className='flex bg-white bg-opacity-10 rounded-lg p-6 shadow-lg w-full mt-3'>
         <p className="text-left md:text-lg text-white leading-relaxed border rounded-lg p-3">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt.
+          Hello, nice to meet you! My name is Nhan Thomas. I'm a 22 year old IT student from Trondheim, currently
+          attending the University of Agder. I'm working on my skills to become a skilled fullstack developer. My passion
+          lies in developing web applications and learning new technologies. Right now I'm trying to learn Svelte and 
+          object-based programming in Java.
         </p>
       </div>
     </BoxReveal>
     <BoxReveal>
-      <div className='flex bg-white bg-opacity-10 rounded-lg p-6 shadow-lg w-full mt-6'>
+      <div className='flex bg-white bg-opacity-10 rounded-lg p-6 shadow-lg w-full mt-3'>
         <p className="text-left md:text-lg text-white leading-relaxed border rounded-lg p-3">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt.
+          As I have been working with multiple different projects, I have accumulated a lot of experience in different technologies. Currently I am
+          working on a digital online store that simulates the process of buying and placing a order. I am also currently dipping my toes in 
+          game development as a means to better my understanding of working with Java. Another goal I have set for myself is to learn and start using
+          Next.js, a React framework that I have heard a lot of good things about.
         </p>
       </div>
     </BoxReveal>

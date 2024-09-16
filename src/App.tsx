@@ -15,27 +15,32 @@ function App() {
     const timer = setTimeout(() => {
       setLoading(false);
     }, 2000);
-
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <>
       {loading && <LoadingScreen />}
       {!loading && (
         <>
           <Navbar />
-          <main className="flex-grow">
-            <Header />
-            <Socials />
-            <Tech />
-            <Experience />
+          <Header />
+          <Socials />
+          <main className="container mx-auto px-4">
+            <div className="flex flex-col md:flex-row gap-8">
+              <div className="lg:w-1/2 lg:mt-11">
+                <Experience />
+              </div>
+              <div className="lg:w-1/2 lg:mt-9">
+                <Tech />
+              </div>
+            </div>
             <Projects />
           </main>
           <Footer />
         </>
       )}
-    </div>
+    </>
   );
 }
 
