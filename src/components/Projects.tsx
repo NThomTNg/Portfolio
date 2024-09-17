@@ -1,8 +1,8 @@
 import React from 'react';
-import p1 from '../assets/p1.jpg';
-import p2 from '../assets/p2.jpg';
-import p3 from '../assets/p3.jpg';
-import p4 from '../assets/p4.jpg';
+import p1 from '../assets/project1.jpg';
+import p2 from '../assets/project2.jpg';
+import p3 from '../assets/project3.jpg';
+import p4 from '../assets/project4.jpg';
 
 interface Project {
   id: number;
