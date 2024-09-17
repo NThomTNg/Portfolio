@@ -9,3 +9,4 @@ Hello! This is the repository that holds my portfolio. Although deployed, I stil
 - Fix up screenshots of projects
 - Fix "top" button
 - Redesign structure (experience and tech carousel)
+- Resize navbar
