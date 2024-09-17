@@ -18,17 +18,20 @@ const Header = () => (
   </div>
   <div className='flex flex-col w-full px-3 md:w-4/6 xl:w-4/5 xl:space-x-5'>
     <BoxReveal>
-      <div className="content relative w-full mt-20 xl:pl-0 xl:w-5/6 xl:ml-80">
+      <div className="hidden md:block content relative w-full mt-20 xl:pl-0 xl:w-5/6 xl:ml-80">
         <div className="content__container">
           <p className="content__container__text">Hello</p>
           <ul className="content__container__list">
             <li className="content__container__list__item">world!</li>
             <li className="content__container__list__item">stranger!</li>
             <li className="content__container__list__item">user!</li>
-            <li className="content__container__list__item">everybody!</li>
+            <li className="content__container__list__item">bạn</li>
           </ul>
         </div>
       </div>
+    </BoxReveal>
+    <BoxReveal>
+      <h1 className='block lg:hidden text-3xl font-bold pl-16 py-10 text-white'>Nice to meet you!</h1>
     </BoxReveal>
     <BoxReveal>
       <div className='flex bg-white bg-opacity-10 rounded-lg p-6 shadow-lg w-full mt-3'>

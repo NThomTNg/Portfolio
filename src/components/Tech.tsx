@@ -58,7 +58,7 @@ const TechCarousel: React.FC<{ technologies: Technology[], title: string }> = ({
   }, []);
 
   return (
-    <div className="mt-6 lg:w-9/12 shadow-lg">
+    <div className="mt-6 lg:ml-12 lg:w-9/12">
       <h2 className="text-2xl font-bold text-white mb-4">{title}</h2>
       <div className="overflow-hidden p-4 rounded-lg shadow-lg border">
         <div

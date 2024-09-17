@@ -1,4 +1,5 @@
 import React from 'react';
+import BoxReveal from "../components/@/components/box-reveal";
 
 type ExperienceItem = {
   position: string;
@@ -6,6 +7,7 @@ type ExperienceItem = {
   period: string;
   work?: string;
 };
+
 
 const ExperienceItem = ({ position, company, period, work }: ExperienceItem) => (
   <div className="mb-6 p-6 bg-transparent rounded-lg shadow-lg border border-white transform transition duration-300 hover:shadow-lg hover:shadow-white">
@@ -18,12 +20,12 @@ const ExperienceItem = ({ position, company, period, work }: ExperienceItem) => 
 
 const Experience = () => {
   const experiences = [
-    { position: "Intern", company: "Swipload", period: "2024 - current", work: "Svelte Application development" },
+    { position: "Internship", company: "Swipload", period: "2024 - current", work: "Svelte Application development" },
     { position: "Groupmember", company: "UIA", period: "2023 - 2023", work: "Application for Nøsted" },
   ];
 
   return (
-    <div className="lg:w-10/12 lg:ml-20 p-4">
+    <div id='experience' className="lg:w-10/12 lg:ml-24 p-4">
       <h2 className="text-3xl font-bold text-white mb-6 border-b-2 border-amber-100 pb-2">Experience</h2>
       <div className="space-y-4">
         {experiences.map((exp, index) => (
