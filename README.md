@@ -8,4 +8,4 @@ Hello! This is the repository that holds my portfolio. Although deployed, I stil
 - Fix up logo
 - Fix up screenshots of projects
 - Fix "top" button
-- Redesign structure
+- Redesign structure (experience and tech carousel)
