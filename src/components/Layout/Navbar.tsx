@@ -1,4 +1,5 @@
 import Icon from '../../assets/Icon.png';
+import CV from '../../assets/CV.pdf';
 
 const Navbar = () => {
   const scrollToSection = (sectionId: string) => {
@@ -34,6 +35,13 @@ const Navbar = () => {
             >
               Projects
             </button>
+            <a
+              href={CV}
+              download="My_CV.pdf"
+              className="text-amber-200 hover:text-white transition-colors text-base sm:text-lg md:text-2xl whitespace-nowrap"
+            >
+              My CV
+            </a>
           </div>
         </div>
       </div>
