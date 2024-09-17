@@ -1,4 +1,3 @@
-import React from 'react';
 import Bilde from '../../assets/Bilde.jpg';
 import './Header.css';
 import BoxReveal from "../@/components/box-reveal";

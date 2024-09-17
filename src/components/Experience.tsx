@@ -1,6 +1,3 @@
-import React from 'react';
-import BoxReveal from "../components/@/components/box-reveal";
-
 type ExperienceItem = {
   position: string;
   company: string;
