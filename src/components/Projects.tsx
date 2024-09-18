@@ -45,7 +45,7 @@ const projects: Project[] = [
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
     <a href={project.githubUrl} target='_blank' rel="noopener noreferrer" className="block mb-3">
-    <div className={`bg-gradient-to-br from-slate-500 to-teal-800 rounded-lg shadow-md overflow-hidden transform duration-500 hover:shadow-md hover:shadow-white hover:scale-105`}>
+    <div className={`bg-gradient-to-br from-slate-500 to-teal-800 rounded-lg shadow-sm overflow-hidden transform duration-500 hover:scale-105`}>
     <img 
     src={project.imageUrl} 
     alt={project.name} 
