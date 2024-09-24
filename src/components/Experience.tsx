@@ -22,7 +22,7 @@ const ExperienceItem = ({ position, company, period, work, url }: ExperienceItem
 
 const Experience = () => {
   const experiences = [
-    { position: "Internship", company: "Swipload", period: "2024 - current", work: "Svelte Application development", url: "https://nthomtng.github.io/PraksisNettSide/pages/oss.html" },
+    { position: "Internship", company: "Swipload", period: "2024 - current", work: "Svelte Application development", url: "https://nthomtng.github.io/PraksisNettSide/" },
     { position: "Groupmember", company: "UIA", period: "2023 - 2023", work: "Application for Nøsted", url: "https://github.com/jonaslefdal/AdminDesk" },
   ];
 

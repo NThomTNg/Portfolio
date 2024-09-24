@@ -37,6 +37,7 @@ interface Technology {
 
 const TechCarousel: React.FC<{ technologies: Technology[], title: string }> = ({ technologies, title }) => {
   const carouselRef = useRef<HTMLDivElement>(null);
+  const isPaused = useRef(false);
 
   useEffect(() => {
     const carousel = carouselRef.current;
@@ -46,13 +47,26 @@ const TechCarousel: React.FC<{ technologies: Technology[], title: string }> = ({
     let currentPosition = 0;
 
     const animate = () => {
+    if (!isPaused.current) {
       currentPosition += 0.7;
       if (currentPosition >= totalWidth / 3) {
         currentPosition = 0;
       }
       carousel.style.transform = `translateX(-${currentPosition}px)`;
-      requestAnimationFrame(animate);
+    }
+    requestAnimationFrame(animate);
+  };
+
+    const handleMouseEnter = () => {
+      isPaused.current = true;
     };
+
+    const handleMouseLeave = () => {
+      isPaused.current = false;
+    };
+
+    carousel.addEventListener("mouseenter", handleMouseEnter);
+    carousel.addEventListener("mouseleave", handleMouseLeave);  
 
     animate();
   }, []);

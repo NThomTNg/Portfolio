@@ -12,7 +12,7 @@ const Navbar = () => {
     <nav className="w-full p-4 bg-transparent">
       <div className="container mx-auto">
         <div className="flex justify-center items-center">
-          <div className="flex flex-row justify-center items-center space-x-6 pt-5 mr-10 md:pt-10 md:mr-40 md:space-x-32">
+          <div className="flex flex-row justify-center items-center space-x-6 pt-4 mr-10 md:mr-40 md:space-x-32">
           <img 
               src={Icon} 
               alt="icon"
