@@ -15,14 +15,14 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    name: "Pc Parts Shop (WIP)",
+    name: "Pc Parts Shop",
     description: "Buy cool pc componets for your build",
     imageUrl: p1,
     githubUrl: "https://nthomtng.github.io/ShoppingCart/"
   },
   {
     id: 2,
-    name: "Vietnamese Resturante (WIP)",
+    name: "Vietnamese Resturante",
     description: "Visit a cozy and authentic Vietnamese resturante",
     imageUrl: p2,
     githubUrl: "https://nthomtng.github.io/Resturante-home-page/"
