@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import Navbar from "./components/Layout/Navbar";
 import Footer from "./components/Layout/Footer";
@@ -13,7 +13,7 @@ import JavaGameProject from "./pages/javaGameProject";
 const AppContent = () => {
   const location = useLocation();
   const [loading, setLoading] = useState(true);
-  const [showButton, setShowButton] = useState(false);
+  const [_showButton, setShowButton] = useState(false);
 
   useEffect(() => {
     setTimeout(() => setLoading(false), 2000);
