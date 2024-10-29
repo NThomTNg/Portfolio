@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import screenshot1 from '../assets/gm.jpg';
 import screenshot2 from '../assets/gm2.jpg';
@@ -8,6 +8,10 @@ import './javeGameProject.css';
 
 const JavaGameProject: React.FC = () => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleBackClick = () => {
     navigate('/');
