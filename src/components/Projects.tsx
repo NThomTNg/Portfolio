@@ -2,7 +2,7 @@ import React from 'react';
 import p1 from '../assets/project1.jpg';
 import p2 from '../assets/project2.jpg';
 import p3 from '../assets/project3.jpg';
-import p4 from '../assets/project4.jpg';
+import p4 from '../assets/titleScreen.jpg';
 
 interface Project {
   id: number;
@@ -15,14 +15,14 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    name: "Pc Parts Shop (WIP)",
+    name: "Pc Parts Shop",
     description: "Buy cool pc componets for your build",
     imageUrl: p1,
     githubUrl: "https://nthomtng.github.io/ShoppingCart/"
   },
   {
     id: 2,
-    name: "Vietnamese Resturante (WIP)",
+    name: "Vietnamese Resturante",
     description: "Visit a cozy and authentic Vietnamese resturante",
     imageUrl: p2,
     githubUrl: "https://nthomtng.github.io/Resturante-home-page/"
@@ -39,22 +39,28 @@ const projects: Project[] = [
     name: "Java Game (Early development)",
     description: "A game reminiscent of the old 2d rpgs",
     imageUrl: p4,
-    githubUrl: "https://media.tenor.com/fZa1K1ZUtscAAAAM/im-on-it-cats.gif"
+    githubUrl: ""
   }
 ];
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
-    <a href={project.githubUrl} target='_blank' rel="noopener noreferrer" className="block mb-3">
+  <a 
+    href={project.id === 4 ? '/java-game-project' : project.githubUrl} 
+    target={project.id === 4 ? '_self' : '_blank'} 
+    rel="noopener noreferrer" 
+    className="block mb-3"
+  >
     <div className={`bg-gradient-to-br from-slate-500 to-teal-800 rounded-lg shadow-sm overflow-hidden transform duration-500 hover:scale-105`}>
-    <img 
-    src={project.imageUrl} 
-    alt={project.name} 
-    className={`w-full lg:h-80 h-auto object-cover ${project.id === 4 ? 'blur-sm' : ''}`} />
-    <div className="p-4">
-      <h3 className="text-xl text-white font-semibold mb-2">{project.name}</h3> 
-      <p className="text-white mb-4">{project.description}</p>
+      <img 
+        src={project.imageUrl} 
+        alt={project.name} 
+        className="w-full lg:h-80 h-auto object-cover" 
+      />
+      <div className="p-4">
+        <h3 className="text-xl text-white font-semibold mb-2">{project.name}</h3> 
+        <p className="text-white mb-4">{project.description}</p>
+      </div>
     </div>
-  </div>
   </a>
 );
 

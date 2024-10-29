@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import Navbar from "./components/Layout/Navbar";
 import Footer from "./components/Layout/Footer";
 import Header from "./components/Header/Header";
@@ -7,70 +8,63 @@ import LoadingScreen from "./components/LoadingScreen";
 import Tech from "./components/Tech";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
+import JavaGameProject from "./pages/javaGameProject";
 
-function App() {
+const AppContent = () => {
+  const location = useLocation();
   const [loading, setLoading] = useState(true);
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-    return () => clearTimeout(timer);
+    setTimeout(() => setLoading(false), 2000);
+    window.addEventListener('scroll', () => {
+      setShowButton(window.scrollY > 300);
+    });
   }, []);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 1550) {
-        setShowButton(true);
-      } else {
-        setShowButton(false);
-      }
-    };
+  const shouldShowNavbar = location.pathname !== '/java-game-project';
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const scrollToTop = () => {
-    const headerSection = document.getElementById('header-section');
-    if (headerSection) {
-      headerSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  if (loading) {
+    return <LoadingScreen />;
+  }
 
   return (
     <>
-      {loading && <LoadingScreen />}
-      {!loading && (
-        <>
-          <Navbar />
-          <Header />
-          <Socials />
-          <main className="container mx-auto px-4">
-            <div className="flex flex-col md:flex-row gap-8 lg:pb-10">
-              <div className="lg:w-1/2 lg:mt-11">
-                <Experience />
-              </div>
-              <div className="lg:w-1/2 lg:mt-9">
-                <Tech />
-              </div>
-            </div>
-            <Projects />
-          </main>
-          <Footer />
-          {showButton && (
-            <button
-              onClick={scrollToTop}
-              className={`hidden md:block fixed bottom-4 left-1/2 transform -translate-x-1/2 p-3 mb-10 bg-amber-200 rounded-full shadow-lg hover:bg-amber-100 transition-opacity duration-300`}
-            >
-              ↑ Top
-            </button>
-          )}
-        </>
-      )}
+      {shouldShowNavbar && <Navbar />}
+      <Routes>
+        <Route path="/java-game-project" element={<JavaGameProject />} />
+        <Route
+          path="/"
+          element={
+            <>
+              <Header />
+              <Socials />
+              <main className="container mx-auto px-4">
+                <div className="flex flex-col md:flex-row gap-8 lg:pb-10">
+                  <div className="lg:w-1/2 lg:mt-11">
+                    <Experience />
+                  </div>
+                  <div className="lg:w-1/2 lg:mt-9">
+                    <Tech />
+                  </div>
+                </div>
+                <Projects />
+              </main>
+              <Footer />
+            </>
+          }
+        />
+      </Routes>
     </>
   );
-}
+};
+
+const App = () => {
+  return (
+    <Router>
+      <AppContent />
+    </Router>
+  );
+};
 
 export default App;
