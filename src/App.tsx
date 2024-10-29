@@ -17,9 +17,13 @@ const AppContent = () => {
 
   useEffect(() => {
     setTimeout(() => setLoading(false), 2000);
-    window.addEventListener('scroll', () => {
+    
+    const handleScroll = () => {
       setShowButton(window.scrollY > 300);
-    });
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const shouldShowNavbar = location.pathname !== '/java-game-project';
@@ -54,6 +58,7 @@ const AppContent = () => {
             </>
           }
         />
+        <Route path="*" element={<div>404 - Not Found</div>} />
       </Routes>
     </>
   );
