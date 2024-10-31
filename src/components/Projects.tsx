@@ -23,10 +23,10 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    name: "Vietnamese Restaurant",
-    description: "Visit a cozy and authentic Vietnamese restaurant",
+    name: "Fantasy Wiki (Work in progress)",
+    description: "Explore a fantasy world with this wiki",
     imageUrl: p2,
-    githubUrl: "https://nthomtng.github.io/Resturante-home-page/"
+    githubUrl: "https://media.tenor.com/3QEtSuzDveAAAAAM/garfield-im-working.gif"
   },
   {
     id: 3,
@@ -68,7 +68,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
             <img
               src={project.imageUrl}
               alt={project.name}
-              className="w-full lg:h-80 h-auto object-cover"
+              className={`w-full lg:h-80 h-auto object-cover ${project.id === 2 ? 'blur-sm' : ''}`}
             />
             <div className="p-4">
               <h3 className="text-xl text-white font-semibold mb-2">{project.name}</h3>
