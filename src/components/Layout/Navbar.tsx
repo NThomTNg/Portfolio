@@ -1,5 +1,5 @@
 import Icon from '../../assets/Icon.png';
-import CV from '../../assets/cv.pdf';
+import CV from '../../assets/Cv.pdf';
 
 const Navbar = () => {
   const scrollToSection = (sectionId: string) => {
