@@ -10,3 +10,4 @@ Hello! This is the repository that holds my portfolio. Although deployed, I stil
 - Fix "top" button
 - Redesign structure (experience and tech carousel)
 - Resize navbar
+- Resize header 
