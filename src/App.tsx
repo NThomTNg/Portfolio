@@ -9,6 +9,7 @@ import Tech from "./components/Tech";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import JavaGameProject from "./pages/javaGameProject";
+import Swipload from './pages/Swipload';
 
 const AppContent = () => {
   const location = useLocation();
@@ -26,7 +27,7 @@ const AppContent = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const shouldShowNavbar = location.pathname !== '/java-game-project';
+  const shouldShowNavbar = location.pathname !== '/java-game-project' && location.pathname !== '/swipload';
 
   if (loading) {
     return <LoadingScreen />;
@@ -37,6 +38,7 @@ const AppContent = () => {
       {shouldShowNavbar && <Navbar />}
       <Routes>
         <Route path="/java-game-project" element={<JavaGameProject />} />
+        <Route path="/swipload" element={<Swipload />} />
         <Route
           path="/"
           element={

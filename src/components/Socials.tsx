@@ -18,7 +18,7 @@ const Socials: React.FC<SocialsProps> = ({
   instagramUrl = 'https://www.instagram.com/nthomnt/',
 }) => {
   return (
-    <div className="flex justify-center items-center gap-4 h-40 mx-auto space-x-2 w-full lg:mt-10 md:space-x-10 ">
+    <div className="flex justify-center items-center gap-4 h-40 mx-auto space-x-2 w-full lg:mt-20 md:space-x-10 ">
         <BoxReveal>
       <a
         href={githubUrl}

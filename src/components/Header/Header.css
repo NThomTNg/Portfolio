@@ -12,7 +12,7 @@
     font-weight: 600;
     overflow: hidden;
     height: 40px;
-    padding: 0 40px;
+    padding: 0 25px;
   }
   
   .content__container:before {
@@ -22,7 +22,7 @@
   
   .content__container:after {
     content: ']';
-    right: 0;
+    right: 150px;
   }
   
   .content__container:after,
