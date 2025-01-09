@@ -25,13 +25,15 @@ const ExperienceItem = ({ position, company, period, work, onClick }: Experience
 const Experience = () => {
   const navigate = useNavigate();
   const experiences = [
-    { id: 1, position: "Internship", company: "Swipload", period: "2024 - 2024", work: "Svelte Application development", url: "" }, // Empty string for internal routing
-    { id: 2, position: "Groupmember", company: "UIA", period: "2023 - 2023", work: "Application for Nøsted", url: "https://github.com/jonaslefdal/AdminDesk" },
+    { id: 1, position: "Internship", company: "Swipload", period: "2024 - 2024", work: "Svelte Application development", url: "" },
+    { id: 2, position: "Groupmember", company: "UIA", period: "2023 - 2023", work: "Application for Nøsted", url: "" },
   ];
 
   const handleClick = (id: number) => {
     if (id === 1) {
       navigate('/swipload');
+    } else if (id === 2) {
+      navigate('/nosted');
     } else {
       window.open(experiences.find(exp => exp.id === id)?.url, '_blank');
     }

@@ -10,6 +10,7 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import JavaGameProject from "./pages/javaGameProject";
 import Swipload from './pages/Swipload';
+import Nosted from './pages/Nosted';
 
 const AppContent = () => {
   const location = useLocation();
@@ -27,7 +28,7 @@ const AppContent = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const shouldShowNavbar = location.pathname !== '/java-game-project' && location.pathname !== '/swipload';
+  const shouldShowNavbar = location.pathname !== '/java-game-project' && location.pathname !=='/nosted' && location.pathname !== '/swipload';
 
   if (loading) {
     return <LoadingScreen />;
@@ -39,6 +40,7 @@ const AppContent = () => {
       <Routes>
         <Route path="/java-game-project" element={<JavaGameProject />} />
         <Route path="/swipload" element={<Swipload />} />
+        <Route path="/nosted" element={<Nosted />} />
         <Route
           path="/"
           element={

@@ -18,41 +18,41 @@ const Socials: React.FC<SocialsProps> = ({
   instagramUrl = 'https://www.instagram.com/nthomnt/',
 }) => {
   return (
-    <div className="flex justify-center items-center gap-4 h-40 mx-auto space-x-2 w-full lg:mt-20 md:space-x-10 ">
+    <div className="flex justify-center items-center gap-4 h-40 mx-auto space-x-2 w-full lg:mt-12 md:space-x-10 ">
         <BoxReveal>
       <a
         href={githubUrl}
-        className="flex items-center justify-center w-16 h-16 lg:w-24 lg:h-24 md:w-20 md:h-20 rounded-lg bg-gray-800 text-white hover:bg-slate-200 hover:text-black transition-colors"
+        className="flex items-center justify-center w-16 h-16 lg:w-22 lg:h-22 md:w-20 md:h-20 rounded-lg bg-gray-800 text-white hover:bg-slate-200 hover:text-black transition-colors"
         aria-label="GitHub"
       >
-        <FaGithub className="lg:w-20 lg:h-20 md:w-16 md:h-16 w-14 h-14"/> 
+        <FaGithub className="md:w-16 md:h-16 w-14 h-14"/> 
       </a>
       </BoxReveal>
       <BoxReveal>
       <a
         href={linkedinUrl}
-        className="flex items-center justify-center w-16 h-16 lg:w-24 lg:h-24 md:w-20 md:h-20 rounded-lg bg-gray-800 text-white hover:bg-slate-200 hover:text-black transition-colors"
+        className="flex items-center justify-center w-16 h-16 lg:w-22 lg:h-22 md:w-20 md:h-20 rounded-lg bg-gray-800 text-white hover:bg-slate-200 hover:text-black transition-colors"
         aria-label="LinkedIn"
       >
-        <FaLinkedin className="lg:w-20 lg:h-20 md:w-16 md:h-16 w-14 h-14" /> 
+        <FaLinkedin className="md:w-16 md:h-16 w-14 h-14" /> 
       </a>
       </BoxReveal>
       <BoxReveal>
       <a
         href={gmailUrl}
-        className="flex items-center justify-center w-16 h-16 lg:w-24 lg:h-24 md:w-20 md:h-20 rounded-lg bg-gray-800 text-white hover:bg-slate-200  hover:text-black transition-colors"
+        className="flex items-center justify-center w-16 h-16 lg:w-22 lg:h-22 md:w-20 md:h-20 rounded-lg bg-gray-800 text-white hover:bg-slate-200  hover:text-black transition-colors"
         aria-label="Gmail"
       >
-        <SiGmail className="lg:w-20 lg:h-20 md:w-16 md:h-16 w-14 h-14" /> 
+        <SiGmail className="md:w-16 md:h-16 w-14 h-14" /> 
       </a>
       </BoxReveal>
       <BoxReveal>
       <a
         href={instagramUrl}
-        className="flex items-center justify-center w-16 h-16 lg:w-24 lg:h-24 md:w-20 md:h-20 rounded-lg bg-gray-800 text-white hover:bg-slate-200  hover:text-black transition-colors"
+        className="flex items-center justify-center w-16 h-16 lg:w-22 lg:h-22 md:w-20 md:h-20 rounded-lg bg-gray-800 text-white hover:bg-slate-200  hover:text-black transition-colors"
         aria-label="Instagram"
       >
-        <FaInstagram className="lg:w-20 lg:h-20 md:w-16 md:h-16 w-14 h-14" />
+        <FaInstagram className="md:w-16 md:h-16 w-14 h-14" />
       </a>
       </BoxReveal>
     </div>
