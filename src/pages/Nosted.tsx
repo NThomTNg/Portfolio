@@ -146,8 +146,8 @@ const Nosted: React.FC = () => {
                             This was the first real project I worked on with a group of students where we had to not only think about the technical aspects of the project,
                             but also the design, user experience, and system architecture. We also had a close dialouge with the company, keeping them frequently updated on our progress.
                             This project was a great learning experience for me, where I learned alot about working with C# and .NET which I was not familiar with before. I also got to use
-                            Docker in practise for the first time, which really helped me grasp how to work with containers and how to deploy applications in a more efficient way. During
-                            the projects time, I got to develop my backend skills alot, and it was quite fun learning how to set up an inject data into a database. Working with
+                            Docker in practise for the first time, which helped me grasp how to work with containers and how to deploy applications in a more efficient way. During
+                            the projects time, I got to develop my backend skills alot, and it was fun learning how to set up, and inject data into a database. Working with
                             fellow students was a great experience, as we all had different skills and knowledge that we could share with each other.
                         </p>
                     </div>
