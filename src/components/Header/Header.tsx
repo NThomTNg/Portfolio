@@ -4,9 +4,9 @@ import BoxReveal from "../@/components/box-reveal";
 
 const Header = () => (
   <div id="header-section" className="relative sm:pt-8 pb-6 mx-auto">
-    <div className="relative flex flex-col lg:gap-8 gap-4 items-center justify-center lg:justify-normal lg:flex-row lg:flex-nowrap max-w-screen-xl mx-auto mt-8 md:py-0">
+    <div className="relative flex flex-col gap-4 items-center justify-center lg:flex-row lg:flex-nowrap max-w-screen-xl mx-auto mt-8 md:py-0">
     <div className='flex flex-col md:flex-row w-full'>
-      <div className='flex justify-center items-center h-auto w-1/2 ml-24 md:w-1/3 xl:w-1/3 xl:ml-0'>
+      <div className='flex justify-center items-center ml-24 h-auto w-1/2 xl:w-1/3 xl:ml-0'>
         <BoxReveal>
           <img 
             src={Bilde} 
@@ -30,11 +30,8 @@ const Header = () => (
           </div>
         </BoxReveal>
         <BoxReveal>
-          <h1 className='block lg:hidden text-3xl font-bold pl-16 py-8 text-white'>Nice to meet you!</h1>
-        </BoxReveal>
-        <BoxReveal>
-          <div className='flex bg-white bg-opacity-10 rounded-lg p-3 lg:p-4 shadow-lg w-full lg:w-5/6 mt-3'>
-            <p className="text-left md:text-base lg:text-base text-white leading-relaxed border rounded-lg p-3">
+          <div className='flex rounded-lg p-3 lg:p-4 w-full lg:w-5/6 mt-3'>
+            <p className="text-left lg:text-base text-white leading-relaxed border rounded-lg p-3 shadow-xl">
               Hello, nice to meet you! My name is Nhan Thomas. I'm a 22 year old IT student from Trondheim, currently
               attending the University of Agder. I'm working on my skills to become a skilled fullstack developer. My passion
               lies in developing web applications and learning new technologies. Right now I'm trying to learn Svelte and 
@@ -43,8 +40,8 @@ const Header = () => (
           </div>
         </BoxReveal>
         <BoxReveal>
-          <div className='flex bg-white bg-opacity-10 rounded-lg p-3 lg:p-4 shadow-lg w-full lg:w-5/6 mt-3'>
-            <p className="text-left md:text-base lg:text-base text-white leading-relaxed border rounded-lg p-3">
+          <div className='flex rounded-lg p-3 lg:p-4 w-full lg:w-5/6 mt-3'>
+            <p className="text-left lg:text-base text-white leading-relaxed border rounded-lg p-3 shadow-xl">
               As I have been working with multiple different projects, I have accumulated a lot of experience in different technologies. Currently I am
               working on a digital online store that simulates the process of buying and placing a order. I am also currently dipping my toes in 
               game development as a means to better my understanding of working with Java. Another goal I have set for myself is to learn and start using

@@ -40,7 +40,7 @@ const projects: Project[] = [
     name: "Java Game (Early development)",
     description: "A game reminiscent of the old 2d rpgs",
     imageUrl: p4,
-    githubUrl: "" // Empty string for internal routing
+    githubUrl: "" 
   }
 ];
 
@@ -64,7 +64,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div className="bg-gradient-to-br from-slate-500 to-teal-800 rounded-lg shadow-sm overflow-hidden transform duration-500 hover:scale-105">
+          <div className="bg-gradient-to-br from-slate-500 to-teal-800 rounded-lg shadow-xl overflow-hidden transform duration-500 hover:scale-105">
             <img
               src={project.imageUrl}
               alt={project.name}
@@ -96,7 +96,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
 const Projects: React.FC = () => {
   return (
     <div id="projects" className="container mx-auto px-4 py-10">
-      <h2 className="text-2xl text-white font-bold mb-6">My Projects</h2>
+      <h2 className="text-2xl text-white font-bold mb-6 pb-2 border-b-2 border-amber-100 w-52">My Projects</h2>
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:gap-10">
         {projects.map(project => (
           <ProjectCard key={project.id} project={project} />
