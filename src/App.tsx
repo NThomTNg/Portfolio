@@ -11,6 +11,7 @@ import Projects from "./components/Projects";
 import JavaGameProject from "./pages/javaGameProject";
 import Swipload from './pages/Swipload';
 import Nosted from './pages/Nosted';
+import Bachelor from './pages/Bachelor';
 
 const AppContent = () => {
   const location = useLocation();
@@ -28,7 +29,7 @@ const AppContent = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const shouldShowNavbar = location.pathname !== '/java-game-project' && location.pathname !=='/nosted' && location.pathname !== '/swipload';
+  const shouldShowNavbar = location.pathname !== '/java-game-project' && location.pathname !=='/nosted' && location.pathname !== '/swipload' && location.pathname !== '/bachelor';
 
   if (loading) {
     return <LoadingScreen />;
@@ -41,18 +42,19 @@ const AppContent = () => {
         <Route path="/java-game-project" element={<JavaGameProject />} />
         <Route path="/swipload" element={<Swipload />} />
         <Route path="/nosted" element={<Nosted />} />
+        <Route path="/bachelor" element={<Bachelor />} />
         <Route
           path="/"
           element={
             <>
               <Header />
               <Socials />
-              <main className="container mx-auto px-4">
-                <div className="flex flex-col md:flex-row gap-8 lg:pb-10">
-                  <div className="lg:w-1/2 lg:mt-11">
+              <main className="container mx-auto px-4 flex flex-col items-center">
+                <div className="flex flex-col gap-8 lg:pb-10 w-full">
+                  <div className="w-full flex justify-center">
                     <Experience />
                   </div>
-                  <div className="lg:w-1/2 lg:mt-9">
+                  <div className="w-full flex justify-center">
                     <Tech />
                   </div>
                 </div>

@@ -72,7 +72,7 @@ const TechCarousel: React.FC<{ technologies: Technology[], title: string }> = ({
   }, []);
 
   return (
-    <div className="mt-6 lg:ml-12 lg:w-9/12">
+    <div className="max-w-4xl">
       <h2 className="text-2xl font-bold text-white mb-4">{title}</h2>
       <div className="overflow-hidden p-4 rounded-lg shadow-lg border">
         <div
@@ -97,9 +97,18 @@ const TechCarousel: React.FC<{ technologies: Technology[], title: string }> = ({
 
 const Tech: React.FC = () => {
   return (
-    <div className="w-full p-4">
-      <TechCarousel technologies={frontendTechnologies} title="Frontend Technologies" />
-      <TechCarousel technologies={backendTechnologies} title="Backend Technologies" />
+    <div className="w-full max-w mx-auto p-4">
+      <div className="w-72">
+        <h2 className="text-3xl font-bold text-white mb-6 border-b-2 border-amber-100 pb-2">Technologies</h2>
+      </div>
+      <div className="flex flex-col md:flex-row gap-6 mt-10">
+        <div className="w-full md:w-1/2">
+          <TechCarousel technologies={frontendTechnologies} title="Frontend Technologies" />
+        </div>
+        <div className="w-full md:w-1/2">
+          <TechCarousel technologies={backendTechnologies} title="Backend Technologies" />
+        </div>
+      </div>
     </div>
   );
 };
