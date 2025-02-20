@@ -13,7 +13,7 @@ interface SocialsProps {
 
 const Socials: React.FC<SocialsProps> = ({
   githubUrl = 'https://github.com/NThomTNg',
-  linkedinUrl = 'https://www.linkedin.com/in/nhan-thomas-nguyen-024860253/',
+  linkedinUrl = 'https://www.linkedin.com/in/thomas-nguyen-024860253/',
   gmailUrl = 'mailto:nt.thom.ng@gmail.com',
   instagramUrl = 'https://www.instagram.com/nthomnt/',
 }) => {
