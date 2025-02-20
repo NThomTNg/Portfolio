@@ -48,7 +48,7 @@ const TechCarousel: React.FC<{ technologies: Technology[], title: string }> = ({
 
     const animate = () => {
     if (!isPaused.current) {
-      currentPosition += 0.7;
+      currentPosition += 2.0;
       if (currentPosition >= totalWidth / 3) {
         currentPosition = 0;
       }
@@ -97,7 +97,7 @@ const TechCarousel: React.FC<{ technologies: Technology[], title: string }> = ({
 
 const Tech: React.FC = () => {
   return (
-    <div className="w-full max-w mx-auto p-4">
+    <div className="w-full max-w mx-auto p-4 mt-10">
       <div className="w-72">
         <h2 className="text-3xl font-bold text-white mb-6 border-b-2 border-amber-100 pb-2">Technologies</h2>
       </div>
